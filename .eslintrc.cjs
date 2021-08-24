@@ -1,4 +1,5 @@
-const path = require('path');
+// const path = require('path');
+// import path frpathom 'path';
 
 module.exports = {
   // So parent files don't get applied
@@ -18,7 +19,7 @@ module.exports = {
     ecmaVersion: 7,
     sourceType: 'module',
   },
-  plugins: ['babel', 'import', 'jsx-a11y'],
+  plugins: ['babel', 'import', 'jsx-a11y', 'mocha'],
   rules: {
     'no-plusplus': 'off',
     'prefer-rest-params': 'off',
@@ -34,5 +35,6 @@ module.exports = {
     'jsx-a11y/no-autofocus': 'off',
     'jsx-a11y/interactive-supports-focus': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 };
